@@ -1,0 +1,68 @@
+﻿<h2 class="page-header">{{ testDetail.name }}</h2>
+
+
+    <!-- Default panel contents -->
+  <!-- Table -->
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Tests</div>
+    <table class="table">
+        <thead >
+            <tr>
+                <th>Step</th>
+                <th>XP</th>
+                <th>Vista</th>
+                <th>Win7</th>
+                <th>Win2008</th>
+                <th>Linux</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is quite a short description.</td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+            </tr>
+            <tr>
+                <td>This is quite a short description.</td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><span class="fa fa-exclamation-circle fa-lg text-danger"></span></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+            </tr>
+            <tr>
+                <td>This is quite a short description.</td>
+                <td><span class="fa fa-exclamation-circle fa-lg text-danger"></span></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><span class="fa fa-exclamation-circle fa-lg text-danger"></span></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+                <td><i class="fa fa-check-circle fa-lg text-success"></i></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Test Parameters</div>
+  <table class="table">
+        <tbody>
+          <tr>
+            <td class="col-md-2">TestParam1:</td>
+            <td class="col-md-10">{{ testDetail.testParam1 }}</td>
+          </tr>
+          <tr>
+            <td>TestParam2:</td>
+            <td>{{ testDetail.testParam2 }}</td>
+          </tr>
+          <tr>
+            <td>TestParam3:</td>
+            <td>{{ testDetail.testParam3 }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
