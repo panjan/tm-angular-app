@@ -12,9 +12,9 @@ testApp.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'TestsController'
                 }
              )
-            .state('tests.item',
+            .state('tests.test',
                 {
-                    url: '/:item',
+                    url: '/:testId',
                     templateUrl: 'App/Tests/TestDetailView.html',
                     controller: 'TestDetailController'
                 }

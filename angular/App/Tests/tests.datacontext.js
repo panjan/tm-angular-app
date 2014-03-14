@@ -10,19 +10,36 @@
 
         var datacontext = {
             metadataStore: manager.metadataStore,
-            getTestsWithSteps: getTestsWithSteps
+            getTests: getTests,
+            getTestWithSteps: getTestWithSteps
         };
         model.initialize(datacontext);
         return datacontext;
 
         //#region private members
 
-        function getTestsWithSteps(forceRefresh) {
+        function getTests(forceRefresh) {
+
+            var query = breeze.EntityQuery
+                .from("Tests")
+                .orderBy("testId desc");
+
+            if (initialized && !forceRefresh) {
+                query = query.using(breeze.FetchStrategy.FromLocalCache);
+            }
+            initialized = true;
+
+            return manager.executeQuery(query)
+                .then(getSucceeded); // caller to handle failure
+        }
+
+        function getTestWithSteps(id, forceRefresh) {
 
             var query = breeze.EntityQuery
                 .from("Tests")
                 .expand("Steps")
-                .orderBy("testId desc");
+                .orderBy("testId desc")
+                .where("testId", "==", id);
 
             if (initialized && !forceRefresh) {
                 query = query.using(breeze.FetchStrategy.FromLocalCache);

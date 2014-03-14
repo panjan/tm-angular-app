@@ -9,9 +9,8 @@
 
         $scope.getTests();
         
-
         function getTests(forceRefresh) {
-            datacontext.getTestsWithSteps(forceRefresh)
+            datacontext.getTests(forceRefresh)
                 .then(getSucceeded).fail(failed).fin(refreshView);
         }
 

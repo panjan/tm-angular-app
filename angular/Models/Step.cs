@@ -7,7 +7,7 @@ using System.Linq;
 namespace angular.Models
 {
     /// <summary>
-    /// Todo item entity
+    /// Step entity
     /// </summary>
     public class Step
     {

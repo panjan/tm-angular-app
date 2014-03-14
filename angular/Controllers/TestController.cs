@@ -18,14 +18,14 @@
             _repository = new TestRepository();
         }
 
-        // GET ~/api/Todo/Metadata 
+        // GET ~/api/Test/Metadata 
         [HttpGet]
         public string Metadata()
         {
             return _repository.Metadata();
         }
 
-        // POST ~/api/Todo/SaveChanges
+        // POST ~/api/Test/SaveChanges
         [HttpPost]
         [ValidateHttpAntiForgeryToken]
         public SaveResult SaveChanges(JObject saveBundle)
@@ -33,7 +33,7 @@
             return _repository.SaveChanges(saveBundle);
         }
 
-        // GET ~/api/Todo/TodoList
+        // GET ~/api/Test/Tests
         [HttpGet]
         public IQueryable<Test> Tests()
         {
