@@ -88,12 +88,14 @@ csx
 # Windows Store app package directory
 AppPackages/
 
+# Data
+App_Data/
+
 # Others
 [Bb]in
 [Oo]bj
 sql
 TestResults
-App_Data
 [Tt]est[Rr]esult*
 *.Cache
 ClientBin
