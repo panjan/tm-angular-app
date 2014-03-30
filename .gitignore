@@ -93,6 +93,7 @@ AppPackages/
 [Oo]bj
 sql
 TestResults
+App_Data
 [Tt]est[Rr]esult*
 *.Cache
 ClientBin
