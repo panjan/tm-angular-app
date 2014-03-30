@@ -10,5 +10,6 @@ A test management prototype app.
 - BreezeJS for data
 - .NET C# MVC for server
 - Breeze.NET for API
+- SignalR for WebSockets
 
 
