@@ -251,6 +251,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Home\homeController.js" />
+    <Content Include="App\Home\homeView.html" />
     <Content Include="App\Playground\playgroundController.js" />
     <Content Include="App\Playground\playgroundView.html" />
     <Content Include="App\signalRService.js" />
