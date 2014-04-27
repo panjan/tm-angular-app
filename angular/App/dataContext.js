@@ -10,7 +10,7 @@
 
         var datacontext = {
             metadataStore: manager.metadataStore,
-            getTests: getTests,
+            getTestsByQuery: getTestsByQuery,
             getTestWithSteps: getTestWithSteps,
             getQueries: getQueries
         };
@@ -19,11 +19,11 @@
 
         //#region private members
 
-        function getTests(forceRefresh) {
-
+        function getTestsByQuery(forceRefresh, queryName) {
             var query = breeze.EntityQuery
-                .from("Tests")
-                .orderBy("testId desc");
+                .from('Tests')
+                .where('query.name', '==', queryName)
+                .orderBy('testId desc');
 
             if (initialized && !forceRefresh) {
                 query = query.using(breeze.FetchStrategy.FromLocalCache);

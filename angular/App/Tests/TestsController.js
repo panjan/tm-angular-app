@@ -1,20 +1,23 @@
 ﻿testApp.controller('TestsController',
-    ['$scope', 'breeze', 'datacontext',
-    function ($scope, breeze, datacontext) {
+    ['$scope', '$state', 'breeze', 'datacontext',
+    function ($scope, $state, breeze, datacontext) {
 
         $scope.tests = [];
-        $scope.getTests = getTests;
+        $scope.getTestsByQuery = getTestsByQuery;
         $scope.refresh = refresh;
         $scope.error = "";
+        $scope.queryName = $state.params['queryName']
 
-        $scope.getTests(true);
+        $scope.getTestsByQuery(true, $scope.queryName);
         
-        function getTests(forceRefresh) {
-            datacontext.getTests(forceRefresh)
-                .then(getSucceeded).fail(failed).fin(refreshView);
+        function getTestsByQuery(forceRefresh, queryName) {
+            datacontext.getTestsByQuery(forceRefresh, queryName)
+                .then(getSucceeded)
+                .fail(failed)
+                .fin(refreshView);
         }
 
-        function refresh() { getTests(true); }
+        function refresh() { getTestsByQuery(true, queryName); }
 
         function getSucceeded(data) {
             $scope.tests = data;

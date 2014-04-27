@@ -15,7 +15,7 @@ testApp.config(function ($stateProvider, $urlRouterProvider) {
              )
             .state('home.tests',
                 {
-                    url: '/tests',
+                    url: '/tests/:queryName',
                     templateUrl: 'App/Tests/testsView.html',
                     controller: 'TestsController'
                 }
