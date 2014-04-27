@@ -6,9 +6,6 @@ using System.Linq;
 
 namespace angular.Models
 {
-    /// <summary>
-    /// Step entity
-    /// </summary>
     public class Step
     {
         public int StepId { get; set; }

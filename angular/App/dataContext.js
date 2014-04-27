@@ -11,7 +11,8 @@
         var datacontext = {
             metadataStore: manager.metadataStore,
             getTests: getTests,
-            getTestWithSteps: getTestWithSteps
+            getTestWithSteps: getTestWithSteps,
+            getQueries: getQueries
         };
         model.initialize(datacontext);
         return datacontext;
@@ -40,6 +41,21 @@
                 .expand("Steps")
                 .orderBy("testId desc")
                 .where("testId", "==", id);
+
+            if (initialized && !forceRefresh) {
+                query = query.using(breeze.FetchStrategy.FromLocalCache);
+            }
+            initialized = true;
+
+            return manager.executeQuery(query)
+                .then(getSucceeded); // caller to handle failure
+        }
+
+        function getQueries(forceRefresh) {
+
+            var query = breeze.EntityQuery
+                .from("Queries")
+                .orderBy("name asc");
 
             if (initialized && !forceRefresh) {
                 query = query.using(breeze.FetchStrategy.FromLocalCache);

@@ -240,6 +240,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Query.cs" />
     <Compile Include="Models\TestContext.cs" />
     <Compile Include="Models\DbInitializer.cs" />
     <Compile Include="Models\Step.cs" />
@@ -259,7 +260,7 @@
     <Content Include="App\Tests\testModel.js" />
     <Content Include="App\Tests\testDetailController.js" />
     <Content Include="App\Tests\testDetailView.html" />
-    <Content Include="App\Tests\testsDataContext.js" />
+    <Content Include="App\dataContext.js" />
     <Content Include="App\Tests\testsController.js" />
     <Content Include="App\Tests\testsView.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />

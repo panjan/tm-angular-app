@@ -38,9 +38,13 @@
         public IQueryable<Test> Tests()
         {
             return _repository.Tests;
-            // We do the following on the client
-            //.Include("Todos")
-            //.OrderByDescending(t => t.TodoListId);
+        }
+
+        // GET ~/api/Test/Queries
+        [HttpGet]
+        public IQueryable<Query> Queries()
+        {
+            return _repository.Queries;
         }
     }
 }

@@ -26,6 +26,14 @@ namespace angular.Models
             }
         }
 
+        public DbQuery<Query> Queries
+        {
+            get
+            {
+                return (DbQuery<Query>)Context.Queries;
+            }
+        }
+
         #region Save processing
 
         // "this.Context" is reserved for Breeze save only!

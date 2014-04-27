@@ -7,7 +7,7 @@
         $scope.refresh = refresh;
         $scope.error = "";
 
-        $scope.getTests();
+        $scope.getTests(true);
         
         function getTests(forceRefresh) {
             datacontext.getTests(forceRefresh)

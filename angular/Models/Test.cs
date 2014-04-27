@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace angular.Models
 {
-    /// <summary>
-    /// Todo list entity
-    /// </summary>
     public class Test
     {
         public int TestId { get; set; }
 
-        public string UserId { get; set; }
-
         [Required, MaxLength(20)]
         public string Title { get; set; }
+
+        [ForeignKey("Query")]
+        public int QueryId { get; set; }
+        public virtual Query Query { get; set; }
 
         public virtual List<Step> Steps { get; set; }
     }

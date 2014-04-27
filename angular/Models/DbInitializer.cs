@@ -9,12 +9,27 @@ namespace angular.Models
     {
         protected override void Seed(TestContext context)
         {
+            var queries = new List<Query>();
+            for (int i = 0; i < 3; i++)
+            {
+                var query = new Query
+                {
+                    Name = "Query" + (i + 1)
+                };
+
+                queries.Add(query);
+                context.Queries.Add(query);
+            }
+
+            context.SaveChanges();
+
             var tests = new List<Test>();
             for (int i = 0; i < 20; i++)
             {
                 var test = new Test
                 {
-                    Title = "Test #" + i
+                    Title = "Test #" + i,
+                    Query = queries[new Random().Next(0, queries.Count - 1)]
                 };
 
                 tests.Add(test);
