@@ -26,11 +26,11 @@ namespace angular.Models
             }
         }
 
-        public DbQuery<Query> Queries
+        public DbQuery<Queue> Queues
         {
             get
             {
-                return (DbQuery<Query>)Context.Queries;
+                return (DbQuery<Queue>)Context.Queues;
             }
         }
 

@@ -7,9 +7,9 @@ using Newtonsoft.Json;
 
 namespace angular.Models
 {
-    public class Query
+    public class Queue
     {
-        public int QueryId { get; set; }
+        public int QueueId { get; set; }
 
         public string Name { get; set; }
 

@@ -40,11 +40,11 @@
             return _repository.Tests;
         }
 
-        // GET ~/api/Test/Queries
+        // GET ~/api/Test/Queue
         [HttpGet]
-        public IQueryable<Query> Queries()
+        public IQueryable<Queue> Queues()
         {
-            return _repository.Queries;
+            return _repository.Queues;
         }
     }
 }

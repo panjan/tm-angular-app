@@ -2,22 +2,22 @@
     ['$scope', 'breeze', 'datacontext',
     function ($scope, breeze, datacontext) {
 
-        $scope.queries = [];
+        $scope.queues = [];
         $scope.refresh = refresh;
         $scope.error = "";
-        $scope.getQueries = getQueries;
+        $scope.getQueues = getQueues;
 
-        $scope.getQueries();
+        $scope.getQueues();
 
-        function getQueries(forceRefresh) {
-            datacontext.getQueries(forceRefresh)
+        function getQueues(forceRefresh) {
+            datacontext.getQueues(forceRefresh)
                 .then(getSucceeded).fail(failed).fin(refreshView);
         }
 
-        function refresh() { getQueries(true); }
+        function refresh() { getQueues(true); }
 
         function getSucceeded(data) {
-            $scope.queries = data;
+            $scope.queues = data;
         }
 
         function failed(error) {

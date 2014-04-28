@@ -16,8 +16,9 @@
 
     function TestInitializer(test) {
         test.errorMessage = "";
-        test.newTestTitle = "";
-        test.isEditingListTitle = false;
+        test.progressSuccess = 30;
+        test.progressWarning = 20;
+        test.progressDanger = 10;
     }
 
     function Test() {

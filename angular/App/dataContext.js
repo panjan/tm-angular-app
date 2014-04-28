@@ -10,19 +10,21 @@
 
         var datacontext = {
             metadataStore: manager.metadataStore,
-            getTestsByQuery: getTestsByQuery,
+            getTestsByQueue: getTestsByQueue,
             getTestWithSteps: getTestWithSteps,
-            getQueries: getQueries
+            getQueues: getQueues
         };
+
         model.initialize(datacontext);
+        
         return datacontext;
 
         //#region private members
 
-        function getTestsByQuery(forceRefresh, queryName) {
+        function getTestsByQueue(forceRefresh, queueName) {
             var query = breeze.EntityQuery
                 .from('Tests')
-                .where('query.name', '==', queryName)
+                .where('queue.name', '==', queueName)
                 .orderBy('testId desc');
 
             if (initialized && !forceRefresh) {
@@ -51,10 +53,10 @@
                 .then(getSucceeded); // caller to handle failure
         }
 
-        function getQueries(forceRefresh) {
+        function getQueues(forceRefresh) {
 
             var query = breeze.EntityQuery
-                .from("Queries")
+                .from("Queues")
                 .orderBy("name asc");
 
             if (initialized && !forceRefresh) {

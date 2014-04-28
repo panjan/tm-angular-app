@@ -22,6 +22,6 @@ namespace angular.Models
 
         public DbSet<Test> Tests { get; set; }
         public DbSet<Step> Steps { get; set; }
-        public DbSet<Query> Queries { get; set; }
+        public DbSet<Queue> Queues { get; set; }
     }
 }

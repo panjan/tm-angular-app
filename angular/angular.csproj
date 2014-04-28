@@ -240,7 +240,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Query.cs" />
+    <Compile Include="Models\Queue.cs" />
     <Compile Include="Models\TestContext.cs" />
     <Compile Include="Models\DbInitializer.cs" />
     <Compile Include="Models\Step.cs" />

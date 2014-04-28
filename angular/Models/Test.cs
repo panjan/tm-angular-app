@@ -15,9 +15,9 @@ namespace angular.Models
         [Required, MaxLength(20)]
         public string Title { get; set; }
 
-        [ForeignKey("Query")]
-        public int QueryId { get; set; }
-        public virtual Query Query { get; set; }
+        [ForeignKey("Queue")]
+        public int QueueId { get; set; }
+        public virtual Queue Queue { get; set; }
 
         public virtual List<Step> Steps { get; set; }
     }
