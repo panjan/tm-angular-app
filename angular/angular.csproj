@@ -258,8 +258,8 @@
     <Content Include="App\Playground\playgroundView.html" />
     <Content Include="App\signalRService.js" />
     <Content Include="App\Tests\testModel.js" />
-    <Content Include="App\Tests\testDetailController.js" />
-    <Content Include="App\Tests\testDetailView.html" />
+    <Content Include="App\TestDetail\testDetailController.js" />
+    <Content Include="App\TestDetail\testDetailView.html" />
     <Content Include="App\dataContext.js" />
     <Content Include="App\Tests\testsController.js" />
     <Content Include="App\Tests\testsView.html" />

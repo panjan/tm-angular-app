@@ -5,6 +5,7 @@ testApp.value('breeze', window.breeze)
     .value('$', $);
 
 testApp.config(function ($stateProvider, $urlRouterProvider) {
+
     $stateProvider
             .state('home',
                 {
@@ -23,7 +24,7 @@ testApp.config(function ($stateProvider, $urlRouterProvider) {
             .state('home.tests.test',
                 {
                     url: '/:testId',
-                    templateUrl: 'App/Tests/testDetailView.html',
+                    templateUrl: 'App/TestDetail/testDetailView.html',
                     controller: 'TestDetailController'
                 }
             )
