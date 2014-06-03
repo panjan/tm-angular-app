@@ -638,15 +638,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="app_orig\about.controller.js" />
-    <Content Include="app_orig\about.logger.js" />
-    <Content Include="app_orig\about.view.html" />
-    <Content Include="app_orig\ajaxlogin.js" />
-    <Content Include="app_orig\todo.controller.js" />
-    <Content Include="app_orig\todo.datacontext.js" />
-    <Content Include="app_orig\todo.main.js" />
-    <Content Include="app_orig\todo.model.js" />
-    <Content Include="app_orig\todo.view.html" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\TodoList.css" />

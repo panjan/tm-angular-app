@@ -1,11 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Data.Entity.Infrastructure;
-using System.Security;
-using System.Security.Principal;
+﻿using System.Data.Entity.Infrastructure;
 using Breeze.WebApi;
 
-// ReSharper disable InconsistentNaming
 namespace angular.Models
 {
     public class TestRepository : EFContextProvider<TestContext>
